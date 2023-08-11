@@ -118,7 +118,7 @@
     },
     //------------------------------------
     {
-      "DownstreamPathTemplate": "/api/WeatherForecast",
+      "DownstreamPathTemplate": "/api/Post/getall",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -126,7 +126,7 @@
           "Port": 5178
         }
       ],
-      "UpstreamPathTemplate": "/oke",
+      "UpstreamPathTemplate": "/post/getall",
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "Bearer",
         "AllowedScopes": []

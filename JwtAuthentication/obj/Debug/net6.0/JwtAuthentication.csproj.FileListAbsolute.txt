@@ -1,0 +1,12 @@
+D:\E-tech\API_GETWAYS_OCELOT\JwtAuthentication\bin\Debug\net6.0\JwtAuthentication.deps.json
+D:\E-tech\API_GETWAYS_OCELOT\JwtAuthentication\bin\Debug\net6.0\JwtAuthentication.dll
+D:\E-tech\API_GETWAYS_OCELOT\JwtAuthentication\bin\Debug\net6.0\JwtAuthentication.pdb
+D:\E-tech\API_GETWAYS_OCELOT\JwtAuthentication\obj\Debug\net6.0\JwtAuthentication.csproj.AssemblyReference.cache
+D:\E-tech\API_GETWAYS_OCELOT\JwtAuthentication\obj\Debug\net6.0\JwtAuthentication.GeneratedMSBuildEditorConfig.editorconfig
+D:\E-tech\API_GETWAYS_OCELOT\JwtAuthentication\obj\Debug\net6.0\JwtAuthentication.AssemblyInfoInputs.cache
+D:\E-tech\API_GETWAYS_OCELOT\JwtAuthentication\obj\Debug\net6.0\JwtAuthentication.AssemblyInfo.cs
+D:\E-tech\API_GETWAYS_OCELOT\JwtAuthentication\obj\Debug\net6.0\JwtAuthentication.csproj.CoreCompileInputs.cache
+D:\E-tech\API_GETWAYS_OCELOT\JwtAuthentication\obj\Debug\net6.0\JwtAuthentication.dll
+D:\E-tech\API_GETWAYS_OCELOT\JwtAuthentication\obj\Debug\net6.0\refint\JwtAuthentication.dll
+D:\E-tech\API_GETWAYS_OCELOT\JwtAuthentication\obj\Debug\net6.0\JwtAuthentication.pdb
+D:\E-tech\API_GETWAYS_OCELOT\JwtAuthentication\obj\Debug\net6.0\ref\JwtAuthentication.dll

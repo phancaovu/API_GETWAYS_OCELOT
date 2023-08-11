@@ -1,0 +1,7 @@
+D:\E-tech\API_GETWAYS_OCELOT\Post\obj\Debug\net6.0\PostAPI.csproj.AssemblyReference.cache
+D:\E-tech\API_GETWAYS_OCELOT\Post\obj\Debug\net6.0\PostAPI.GeneratedMSBuildEditorConfig.editorconfig
+D:\E-tech\API_GETWAYS_OCELOT\Post\obj\Debug\net6.0\PostAPI.AssemblyInfoInputs.cache
+D:\E-tech\API_GETWAYS_OCELOT\Post\obj\Debug\net6.0\PostAPI.AssemblyInfo.cs
+D:\E-tech\API_GETWAYS_OCELOT\Post\obj\Debug\net6.0\PostAPI.csproj.CoreCompileInputs.cache
+D:\E-tech\API_GETWAYS_OCELOT\Post\obj\Debug\net6.0\PostAPI.MvcApplicationPartsAssemblyInfo.cs
+D:\E-tech\API_GETWAYS_OCELOT\Post\obj\Debug\net6.0\PostAPI.MvcApplicationPartsAssemblyInfo.cache

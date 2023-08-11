@@ -1,0 +1,208 @@
+{
+  "Routes": [
+    // Authentication getway
+    {
+      "DownstreamPathTemplate": "/api/JwtAuthentication",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7170
+        }
+      ],
+      "UpstreamPathTemplate": "/api/login",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+    // User API Getway
+
+    // -------- GET ALL USERS --------------
+    {
+      "DownstreamPathTemplate": "/api/User/Getall",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7257
+        }
+      ],
+      "UpstreamPathTemplate": "/user/getall",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    // -------- GET BY USER ID --------------
+    {
+      "DownstreamPathTemplate": "/api/User/getbyid/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7257
+        }
+      ],
+      "UpstreamPathTemplate": "/user/getbyid/{id}",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    // -------- ADD USERS --------------
+    {
+      "DownstreamPathTemplate": "/api/User/AddUser",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7257
+        }
+      ],
+      "UpstreamPathTemplate": "/user/adduser",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "UpstreamHttpMethod": [ "Post", "Put" ]
+    },
+    // -------- UPDATE USERS --------------
+    {
+      "DownstreamPathTemplate": "/api/User/update/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7257
+        }
+      ],
+      "UpstreamPathTemplate": "/user/update/{id}",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "UpstreamHttpMethod": [ "Post", "Put" ]
+    },
+    // -------- DELETE USERS --------------
+    {
+      "DownstreamPathTemplate": "/api/User/Delete/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7257
+        }
+      ],
+      "UpstreamPathTemplate": "/user/delete/{id}",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+
+      },
+      "UpstreamHttpMethod": [ "Post", "Put", "Delete" ]
+    },
+
+    //    Post api Getway
+    // ------WeatherForecast--------------------------
+    {
+      "DownstreamPathTemplate": "/api/WeatherForecast",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5178
+        }
+      ],
+      "UpstreamPathTemplate": "/oke",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    //------------------------------------
+    {
+      "DownstreamPathTemplate": "/api/WeatherForecast",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5178
+        }
+      ],
+      "UpstreamPathTemplate": "/oke",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    //-------------------------------------
+    {
+      "DownstreamPathTemplate": "/api/WeatherForecast",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5178
+        }
+      ],
+      "UpstreamPathTemplate": "/oke",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    //----------------------------------------------
+    {
+      "DownstreamPathTemplate": "/api/WeatherForecast",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5178
+        }
+      ],
+      "UpstreamPathTemplate": "/oke",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    //-----------------------------------------
+    {
+      "DownstreamPathTemplate": "/api/WeatherForecast",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5178
+        }
+      ],
+      "UpstreamPathTemplate": "/oke",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    //---------------------------------------------------
+    {
+      "DownstreamPathTemplate": "/api/WeatherForecast",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5178
+        }
+      ],
+      "UpstreamPathTemplate": "/oke",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "UpstreamHttpMethod": [ "Get" ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:8000"
+  }
+}

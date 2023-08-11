@@ -1,0 +1,92 @@
+﻿@page "/User"
+@inject HttpClient httpClient
+@using BlazorWeb.Models;
+
+<PageTitle>User</PageTitle>
+
+
+@if (userList != null && userList.Count != 0)
+{
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <td>User Name</td>
+                <td>Email</td>
+                <td>Full Name</td>
+                <td>User ID</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var usr in userList)
+            {
+                <tr>
+                    <td>@usr.Username</td>
+                    <td>@usr.Email</td>
+                    <td>@usr.FullName</td>
+                    <td>@usr.UserID</td>
+                    <td><button @onclick="async () =>{await DeleteUser(usr.UserID);}">Delete</button></td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <span style="color:red; font-weight:500">No user here</span>
+}
+<br />
+<br />
+<div class="border-3">
+    <input @bind="user.UserID" placeholder="userID" />
+    <input @bind="user.Email" placeholder="Email" />
+    <input @bind="user.FullName" placeholder="FullName" />
+    <input @bind="user.Username" placeholder="userName" />
+    <br />
+    <br />
+    <button class="btn btn-primary" @onclick="AddUser">ADD USER</button>
+    <button class="btn btn-primary" @onclick="async () =>{await UpdateUser();}">Update</button>
+</div>
+@code {
+    private int currentCount = 0;
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+
+    private List<UserViewModel>? userList;
+    private UserViewModel user = new UserViewModel();
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+        await FetchProductList();
+    }
+    private async Task FetchProductList()
+    {
+        userList = await httpClient.GetFromJsonAsync<List<UserViewModel>>("/user/getall");
+    }
+    private async Task DeleteUser(int id)
+    {
+        await httpClient.DeleteAsync($"api/User/delete/{id}");
+        await FetchProductList();
+        //userList = await httpClient.GetFromJsonAsync<List<UserViewModel>>("/api/User/all");
+
+    }
+    private async Task AddUser()
+    {
+        await httpClient.PostAsJsonAsync<UserViewModel>("/user/adduser/", user);
+        await FetchProductList();
+        //userList = await httpClient.GetFromJsonAsync<List<UserViewModel>>("/api/User/all");
+    }
+    private async Task UpdateUser()
+    {
+        await httpClient.PutAsJsonAsync<UserViewModel>("/user/update/", user);
+        await FetchProductList();
+    }
+    private async Task GetUser(int id)
+    {
+        await httpClient.GetAsync($"/user/getbyid/{id}");
+        await FetchProductList();
+    }
+}

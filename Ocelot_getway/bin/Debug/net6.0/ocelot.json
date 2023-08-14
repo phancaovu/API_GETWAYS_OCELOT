@@ -98,7 +98,9 @@
       "UpstreamHttpMethod": [ "Post", "Put", "Delete" ]
     },
 
-    //Post api Getway
+    ////////////////////////////////////////////////
+    //    Post api Getway
+    // ------WeatherForecast--------------------------
     {
       "DownstreamPathTemplate": "/api/WeatherForecast",
       "DownstreamScheme": "http",
@@ -109,11 +111,88 @@
         }
       ],
       "UpstreamPathTemplate": "/oke",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    //--------------GET ALL POST----------------------
+    {
+      "DownstreamPathTemplate": "/api/Post/getall",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5178
+        }
+      ],
+      "UpstreamPathTemplate": "/post/getall",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    //-------------GET BY ID---------------------
+    {
+      "DownstreamPathTemplate": "/api/Post/getbyid/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5178
+        }
+      ],
+      "UpstreamPathTemplate": "/post/getbyid/{id}",
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "Bearer",
         "AllowedScopes": []
       },
       "UpstreamHttpMethod": [ "Get" ]
+    },
+    //--------------ADD POST------------------------
+    {
+      "DownstreamPathTemplate": "/api/Post/addpost",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5178
+        }
+      ],
+      "UpstreamPathTemplate": "/post/addpost",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+    //------------UPDATE POST-----------------------
+    {
+      "DownstreamPathTemplate": "/api/Post/updatepost/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5178
+        }
+      ],
+      "UpstreamPathTemplate": "/post/update/{id}",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "UpstreamHttpMethod": [ "Put" ]
+    },
+    //-----------------DELETE POST------------------------------
+    {
+      "DownstreamPathTemplate": "/api/Post/delete/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5178
+        }
+      ],
+      "UpstreamPathTemplate": "/post/delete/{id}",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "UpstreamHttpMethod": [ "Delete" ]
     }
   ],
   "GlobalConfiguration": {
